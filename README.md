@@ -1,2 +1,2 @@
-# tms
-Telepresenter Management System - Presentation Recorder Management System
+# prms
+Presentation Recorder Management System
