@@ -544,7 +544,7 @@ public class TmsTelnet
             }
             if (code[0] == 'T') {
                 if (code[2] == 'A') {
-                  typeRole = "Announce";
+                  typeRole = "RTSP Streaming";
                 }
                 if (code[2] == 'C') {
                     typeRole = "Coordinator";
@@ -565,7 +565,10 @@ public class TmsTelnet
                     typeRole = "Receiver";
                 }
                 if (code[2] == 'S') {
-                    typeRole = "Sender";
+                    typeRole = "Streaming";
+                }
+                if (code[2] == 'T') {
+                  typeRole = "RTMP Streaming";
                 }
                 if (code[2] == 'W') {
                   typeRole = "Waiting";
