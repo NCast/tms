@@ -265,6 +265,10 @@ public class TmsTelnet
                 if (r[x] == "") {
                     continue;
                 }
+                if (r[x].charAt(0) == ',') {
+                    response = response + r[x];
+                    continue;
+                }
                 if (r[x].charAt(0) == '&') {
                     continue;
                 }

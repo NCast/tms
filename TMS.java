@@ -182,7 +182,7 @@ public class TMS extends WindowAdapter implements ActionListener {
 		  quiet = quiet_str.equals("true");
 		  log = log_str.equals("true");
 		  
-		  // If a layout was specified check it, otherwise put up a dialog bo and ask the user for it
+		  // If a layout was specified check it, otherwise put up a dialog box and ask the user for it
 		  if (layout_str != null && layout_str.length() > 0) {
 		    try {
 		      layout = Layouts.valueOf(layout_str);
@@ -208,7 +208,7 @@ public class TMS extends WindowAdapter implements ActionListener {
                             null,
                             layoutChoices,
                             layoutChoices[0]);
-        //If a string was returned, setup site value.
+        //If a string was returned, setup layout value.
         if ((s != null) && (s.length() > 0)) {
             layout_str = s;
             layout = Layouts.valueOf(layout_str);
@@ -671,6 +671,7 @@ public class TMS extends WindowAdapter implements ActionListener {
           };
           try {
             // Read from a URL
+            System.err.println("Image httpApi: " + httpApi);
             URL url = new URL(httpApi);
             originalImage = ImageIO.read(url);
             if (PRHD) {           
